@@ -37,7 +37,10 @@ qemu:
 	@echo "$(YELLOW)-------- Simulate on QEMU-RISCV --------$(END)"
 	cp $(RELEASE)/earth.elf $(QEMU)/qemu.elf
 	$(OBJCOPY) --update-section .image=$(TOOLS)/disk.img $(QEMU)/qemu.elf
-	$(RISCV_QEMU) -readconfig $(QEMU)/sifive-e31.cfg -kernel $(QEMU)/qemu.elf -nographic
+	$(RISCV_QEMU) -readconfig $(QEMU)/sifive-e31.cfg -kernel $(QEMU)/qemu.elf -nographic -s
+
+debug: 
+	$(RISCV_GDB) $(QEMU)/qemu.elf
 
 clean:
 	rm -rf build
@@ -47,6 +50,7 @@ clean:
 
 RISCV_QEMU = qemu-system-riscv32
 RISCV_CC = riscv64-unknown-elf-gcc
+RISCV_GDB = riscv64-unknown-elf-gdb
 OBJDUMP = riscv64-unknown-elf-objdump
 OBJCOPY = riscv64-unknown-elf-objcopy
 
