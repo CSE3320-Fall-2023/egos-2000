@@ -13,8 +13,8 @@
 int main(int argc, char** argv) {
     if (argc == 1) {
         int home_ino = dir_lookup(0, "home/");
-        grass->workdir_ino = dir_lookup(home_ino, "yunhao/");
-        strcpy(grass->workdir, "/home/yunhao");
+        grass->workdir_ino = dir_lookup(home_ino, "cse3320/");
+        strcpy(grass->workdir, "/home/cse3320");
         return 0;
     }
 

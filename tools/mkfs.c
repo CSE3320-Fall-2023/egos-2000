@@ -32,15 +32,15 @@ char* kernel_processes[] = {
 };
 
 /* Inode - File/Directory mappings:
-#0: /              #1: /home                #2: /home/yunhao  #3: /home/rvr
-#4: /home/lorenzo  #5: /home/yunhao/README  #6: /bin          #7: /bin/echo
+#0: /              #1: /home                #2: /home/cse3320  #3: /home/rvr
+#4: /home/tbakker  #5: /home/cse3320/README  #6: /bin          #7: /bin/echo
 #8: /bin/cat       #9: /bin/ls              #10:/bin/cd       #11:/bin/pwd
 #12:/bin/clock     #13:/bin/crash1          #14:/bin/crash2   #15:/bin/ult
 */
 #define NINODE 16
 char* contents[] = {
                     "./   0 ../   0 home/   1 bin/   6 ",
-                    "./   1 ../   0 yunhao/   2 rvr/   3 lorenzo/   4 ",
+                    "./   1 ../   0 cse3320/   2 rvr/   3 tbakker/   4 ",
                     "./   2 ../   1 README   5 ",
                     "./   3 ../   1 ",
                     "./   4 ../   1 ",
