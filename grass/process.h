@@ -36,6 +36,7 @@ void proc_free(int);
 void proc_set_ready (int);
 void proc_set_running (int);
 void proc_set_runnable (int);
+int  proc_get_pid( );
 
 void ctx_entry(void);
 void ctx_start(void** old_sp, void* new_sp);

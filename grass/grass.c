@@ -27,6 +27,7 @@ int main() {
     grass->proc_alloc = proc_alloc;
     grass->proc_free = proc_free;
     grass->proc_set_ready = proc_set_ready;
+    grass->proc_get_pid = proc_get_pid;
 
     grass->sys_exit = sys_exit;
     grass->sys_send = sys_send;

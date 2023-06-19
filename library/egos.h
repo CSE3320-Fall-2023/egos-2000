@@ -40,6 +40,7 @@ struct grass {
     int  (*proc_alloc)();
     void (*proc_free)(int pid);
     void (*proc_set_ready)(int pid);
+    int  (*proc_get_pid)();
 
     /* System call interface */
     void (*sys_exit)(int status);
@@ -81,3 +82,4 @@ extern struct grass *grass;
 #define ACCESS(x) (*(__typeof__(*x) volatile *)(x))
 #define REGW(base, offset) (ACCESS((unsigned int*)(base + offset)))
 #define REGB(base, offset) (ACCESS((unsigned char*)(base + offset)))
+
