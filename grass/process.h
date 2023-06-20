@@ -29,6 +29,7 @@ extern struct process proc_set[MAX_NPROCESS];
 
 void timer_init();
 void timer_reset();
+long long mtime_get();
 
 void proc_init();
 int  proc_alloc();
@@ -37,6 +38,7 @@ void proc_set_ready (int);
 void proc_set_running (int);
 void proc_set_runnable (int);
 int  proc_get_pid( );
+struct process * proc_get_proc_set( );
 
 void ctx_entry(void);
 void ctx_start(void** old_sp, void* new_sp);

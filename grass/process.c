@@ -82,3 +82,5 @@ void proc_free(int pid) {
 void proc_set_ready(int pid) { proc_set_status(pid, PROC_READY); }
 void proc_set_running(int pid) { proc_set_status(pid, PROC_RUNNING); }
 void proc_set_runnable(int pid) { proc_set_status(pid, PROC_RUNNABLE); }
+int  proc_get_pid( ){ return curr_pid; }
+struct process * proc_get_proc_set( ){ return &proc_set[0];}

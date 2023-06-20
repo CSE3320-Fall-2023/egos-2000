@@ -9,8 +9,7 @@
  * see section 3.1.15 of references/riscv-privileged-v1.10.pdf
  * and section 9.1, 9.3 of references/sifive-fe310-v19p04.pdf
  */
-
-static long long mtime_get() {
+long long mtime_get() {
     int low, high;
     do {
         high = *(int*)(0x200bff8 + 4);
