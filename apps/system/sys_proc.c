@@ -57,6 +57,15 @@ int main() {
             break;
         case PROC_KILLALL:
             grass->proc_free(-1); break;
+        case PROC_SETPRIO:
+            /*
+              Student's code goes here (priority / scheduler). 
+              Set the priority of the process.  The req should
+              have the pid and priority.
+              Send a reply signifying CMD_OK on success and
+              CMD_ERROR on failure
+            */  
+            break;
         default:
             FATAL("sys_proc: invalid request %d", req->type);
         }

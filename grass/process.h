@@ -19,6 +19,7 @@ struct process{
     int receiver_pid; /* used when waiting to send a message */
     void *sp, *mepc;  /* process context = stack pointer (sp)
                        * + machine exception program counter (mepc) */
+    /* Student's code goes here to add to the process control block (priority / scheduler)*/
 };
 
 #define MAX_NPROCESS  16

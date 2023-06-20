@@ -6,6 +6,7 @@
 void exit(int status);
 int dir_lookup(int dir_ino, char* name);
 int file_read(int file_ino, int offset, char* block);
+int setprio( int pid, int priority );
 
 enum grass_servers {
     GPID_UNUSED,
@@ -23,7 +24,8 @@ struct proc_request {
     enum {
           PROC_SPAWN,
           PROC_EXIT,
-          PROC_KILLALL
+          PROC_KILLALL,
+          PROC_SETPRIO
     } type;
     int argc;
     char argv[CMD_NARGS][CMD_ARG_LEN];

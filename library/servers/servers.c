@@ -48,3 +48,9 @@ int file_read(int file_ino, int offset, char* block) {
 
     return reply->status == FILE_OK? 0 : -1;
 }
+
+int setprio( int pid, int priority )
+{
+  /* Student's code goes here to send a request to set a processes priority */
+  /* and read and return the status */
+}
