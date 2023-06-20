@@ -41,7 +41,7 @@ struct grass {
     void (*proc_free)(int pid);
     void (*proc_set_ready)(int pid);
     int  (*proc_get_pid)();
-    struct process (*proc_get_proc_set)();
+    struct process *(*proc_get_proc_set)();
 
     long long int (*gettime)();
 
