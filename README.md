@@ -40,11 +40,10 @@ The definitions of `struct earth` and `struct grass` in [this header file](libra
 
 ### Usages and Documentation
 
-For compiling and running egos-2000, please read [this document](references/USAGES.md).
+For compiling and running egos-2000, please read [this document](COMPILING.md).
 The [RISC-V instruction set manual](references/riscv-privileged-v1.10.pdf) and [SiFive FE310 manual](references/sifive-fe310-v19p04.pdf) introduce the privileged ISA and processor memory map.
 [This document](references/README.md) further introduces the teaching plans, architecture and development history.
 
-For any questions, please contact [Yunhao Zhang](https://dolobyte.net/).
 
 ## Acknowledgements
 
