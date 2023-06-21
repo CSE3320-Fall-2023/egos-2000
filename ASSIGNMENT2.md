@@ -42,3 +42,15 @@ Add a user program test_pri.c in apps/user.  This program will take two command-
 ```
 The above example will run 100 times at priority level 2 and print its PID.
 You will need edit tools/mkfs.c to add your new executable to disk image.
+
+## How to submit code and report.
+
+Your program source code is to be turned in via the Feedback GitHub pull request. Do not merge this pull request. Submission time is determined by the GitHub system time. You may push your code as often as you wish. Only your last submission will be graded.
+
+## Administrative
+
+This assignment must be coded in C. Any other language will result in 0 points. Your programs will be compiled and graded on the course GitHub Codespace. Code that does not compile with the provided makefile will result in a 0.
+
+## Academic Integrity
+
+This assignment must be 100% your own work. No code may be copied from friends, previous students, books, web pages, etc. All code submitted is automatically checked against a database of previous semester’s graded assignments, current student’s code and common web sources. By submitting your code on GitHub you are attesting that you have neither given nor received unauthorized assistance on this work. Code that is copied from an external source or used as inspiration, excluding the course github, will result in a 0 for the assignment and referral to the Office of Student Conduct.
