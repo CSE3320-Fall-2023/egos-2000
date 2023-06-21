@@ -27,7 +27,7 @@ To the process control block add:
 
 Add a user application kill.c that takes a PID as a command line parameter and kills the process that has the user supplied PID.
 
-You will need edit tools/mkfs.c to add your new executable to disk image.
+You will need edit tools/mkfs.c to add your new executable to disk image.  You will need to add a new type of proc_req: PROC_KILL and the associated code in servers.c and sys_proc.c
 
 ### ps 
 Add functionality to the ps command in ps.c to display:
