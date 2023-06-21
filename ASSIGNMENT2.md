@@ -7,8 +7,11 @@ CHange the scheduling in scheduler.c from a round robin to a multi-queue priorit
 
 You must keep both schedulers, the round robing and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
 
-### Implement setprio
-Implement the setprio system call to allow processes to set their priority.  
+### Default priority
+All processes must start with a default priority of 5, except for the four kernel processes. The kernel processes start with a priority of 3.
+
+### Implement setprio system call
+Implement the setprio system call to allow processes to set their priority. The priority must be between 1 and 10.  
 
 ### Process control blocks
 To the process control block add:
