@@ -2,13 +2,19 @@
 
 ## Requirements
 
-1. ### Implement setprio
+### Scheduler
+CHange the scheduling in scheduler.c from a round robin to a multi-queue priority scheduler.  Priorities are represented as integers from 1 to 10 with 1 being the highest priority.  Each priority level must have its own queue.  The scheduler shall select the process from the queue with the highest priority level to run.  To keep from starving processes, your scheduler must implement aging.  Each time all the processes in a priority level are run every process with priority levels lower are moved up a priority level.  For example, if the priority level 1 queue completes then before those processes are run again all priority two processes a temporarily promoted to priority one. All priority three processes are temporarily promoted to prioirity two, etc.  Once a process is allowed to run it is returned back to its original priority.
+
+You must keep both schedulers, the round robing and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
+
+### Implement setprio
 Implement the setprio system call to allow processes to set their priority.  
 
 ### Process control blocks
 To the process control block add:
 1. Priority, an integer from 1 to 10
-2. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
+2. Current aged priority
+3. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
 
 ### ps 
 Add functionality to the ps command in ps.c to display:
