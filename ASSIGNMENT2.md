@@ -2,7 +2,7 @@
 
 ## Requirements
 
-### Implement setprio
+1. ### Implement setprio
 Implement the setprio system call to allow processes to set their priority.  
 
 ### Process control blocks
