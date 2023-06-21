@@ -37,5 +37,5 @@ Add a user program test_pri.c in apps/user.  This program will take two command-
 ➜ /home/cse3320 test_pri 100 2
 ......
 ```
-The above example will run 100 times at prioirty level 2 and print its PID.
+The above example will run 100 times at priority level 2 and print its PID.
 You will need edit tools/mkfs.c to add your new executable to disk image.
