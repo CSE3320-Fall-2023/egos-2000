@@ -9,7 +9,9 @@ You may complete this assignment in groups of up to two people. If you wish to b
 ### Scheduler
 Change the scheduling in scheduler.c from a round robin to a multi-queue priority scheduler.  Priorities are represented as integers from 1 to 10 with 1 being the highest priority.  Each priority level must have its own queue.  The scheduler shall select the process from the queue with the highest priority level to run.  To keep from starving processes, your scheduler must implement aging.  Each time all the processes in a priority level are run every process with priority levels lower are moved up a priority level.  For example, if the priority level 1 queue completes then before those processes are run again all priority two processes are temporarily promoted to priority one. All priority three processes are temporarily promoted to prioirity two, etc.  Once a process is allowed to run it is returned back to its original priority.
 
-You must keep both schedulers, the round robing and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
+You can think of your scheduler as having one run queue and 9 levels of waiting queues.
+
+You must keep both schedulers, the round robin and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
 
 ### Default priority
 All processes must start with a default priority of 5, except for the four kernel processes. The kernel processes start with a priority of 3.
