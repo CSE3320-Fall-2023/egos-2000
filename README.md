@@ -27,7 +27,7 @@ SUM:                            52            596            801           2000 
 
 ## Earth and Grass Operating System
 
-egos-2000 was developed as a new teaching OS for [CS5411/4411 at Cornell](https://www.cs.cornell.edu/courses/cs4411/2022fa/schedule/). It adopts a 3-layer architecture.
+egos-2000 was developed as a new teaching OS for CS5411/4411 at Cornell. It adopts a 3-layer architecture.
 
 * The **earth layer** implements hardware-specific abstractions.
     * tty and disk device interfaces
