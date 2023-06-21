@@ -31,3 +31,11 @@ PID     STATUS  PRIORITY  CTX
 6       4       2
 ......
 ```
+### test_pri
+Add a user program test_pri.c in apps/user.  This program will take two command-line parameters: number of iterations to run and priority.
+```shell
+➜ /home/cse3320 test_pri 100 2
+......
+```
+The above example will run 100 times at prioirty level 2 and print its PID.
+You will need edit tools/mkfs.c to add your new executable to disk image.
