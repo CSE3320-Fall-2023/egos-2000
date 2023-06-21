@@ -14,7 +14,7 @@ You can think of your scheduler as having one run queue and 9 levels of waiting 
 You must keep both schedulers, the round robin and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
 
 ### Default priority
-All processes must start with a default priority of 5, except for the four kernel processes. The kernel processes start with a priority of 3.
+All processes must start with a default priority of 2, except for the four kernel processes. The kernel processes start with a priority of 1.
 
 ### Implement setprio system call
 Implement the setprio system call to allow processes to set their priority. The priority must be between 1 and 10.  
