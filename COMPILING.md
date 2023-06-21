@@ -19,8 +19,6 @@ After this step, `build/release` holds the ELF format binary executables and `bu
 
 ## Step2: Create the disk and bootROM images
 
-Make sure you have a C compiler (i.e., the `cc` command) in your shell environment.
-
 ```shell
 > make install
 -------- Create the Disk Image --------
