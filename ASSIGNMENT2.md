@@ -23,6 +23,12 @@ To the process control block add:
 2. Current aged priority
 3. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
 
+### kill
+
+Add a user application kill.c that takes a PID as a command line parameter and kills the process that has the user supplied PID.
+
+You will need edit tools/mkfs.c to add your new executable to disk image.
+
 ### ps 
 Add functionality to the ps command in ps.c to display:
 1. Process priority
