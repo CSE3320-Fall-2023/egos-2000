@@ -24,11 +24,11 @@ Add functionality to the ps command in ps.c to display:
 ```shell
 ➜ /home/cse3320 ps
 PID     STATUS  PRIORITY  CTX
-1       11      1
-2       5       2
-3       4       1
-4       4       3
-6       4       2
+1       11      1         50    
+2       5       2         23
+3       4       1         49
+4       4       3         12
+6       4       2         19
 ......
 ```
 ### test_pri
