@@ -1,17 +1,10 @@
-# Assignment 2: Scheduling
+# Assignment 1: System Calls and libc
 
-For this assignment you will be making modifications to the egos-2000 operating system.  You will be implementing a new scheduler, a new system call, and a few assorted utility programs.
+For this assignment you will be making modifications to the egos-2000 operating system.  You will be implementing a new system call, a new libc function and a few assorted utility programs.
 
 You may complete this assignment in groups of up to two people. If you wish to be in a group you must add your group to the spreadsheet linked in the Canvas assignment no later than 07/02/23 at at 11:59pm. 
 
 ## Requirements
-
-### Scheduler
-Change the scheduling in scheduler.c from a round robin to a multi-queue priority scheduler.  Priorities are represented as integers from 1 to 10 with 1 being the highest priority.  Each priority level must have its own queue.  The scheduler shall select the process from the queue with the highest priority level to run.  To keep from starving processes, your scheduler must implement aging.  Each time all the processes in a priority level are run every process with priority levels lower are moved up a priority level.  For example, if the priority level 1 queue completes then before those processes are run again all priority two processes are temporarily promoted to priority one. All priority three processes are temporarily promoted to prioirity two, etc.  Once a process is allowed to run it is returned back to its original priority.
-
-You can think of your scheduler as having one run queue and 9 levels of waiting queues.
-
-You must keep both schedulers, the round robin and your new scheduler.  You will use a #define and #ifdef / #endif to choose the scheduler you want to compile into your OS.
 
 ### Default priority
 All processes must start with a default priority of 2, except for the four kernel processes. The kernel processes start with a priority of 1.
@@ -22,7 +15,7 @@ Implement the setprio system call to allow processes to set their priority. The 
 ### Process control blocks
 To the process control block add:
 1. Priority, an integer from 1 to 10
-2. Current aged priority
+2. 
 3. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
 
 ### kill
@@ -46,14 +39,6 @@ PID     STATUS  PRIORITY  CTX
 6       4       2         19
 ......
 ```
-### test_pri
-Add a user program test_pri.c in apps/user.  This program will take two command-line parameters: number of iterations to run and priority.
-```shell
-➜ /home/cse3320 test_pri 100 2
-......
-```
-The above example will run 100 times at priority level 2 and print its PID.
-You will need edit tools/mkfs.c to add your new executable to disk image.
 
 ## How to submit code and report.
 
