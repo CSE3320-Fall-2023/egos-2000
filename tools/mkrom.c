@@ -20,10 +20,10 @@
 #include <assert.h>
 #include <sys/stat.h>
 
-#define SIZE_4MB  4 * 1024 * 1024
+#define SIZE_16MB  16 * 1024 * 1024
 
 int fe310_size, earth_size, disk_size;
-char mem_fe310[SIZE_4MB], mem_earth[SIZE_4MB], mem_disk [SIZE_4MB];
+char mem_fe310[SIZE_16MB], mem_earth[SIZE_16MB], mem_disk [SIZE_16MB];
 
 int load_file(char* file_name, char* print_name, char* dst) {
     struct stat st;
@@ -45,12 +45,12 @@ int main(int argc, char** argv) {
     earth_size = load_file("earth.bin",                  "Earth binary", mem_earth);
     disk_size =  load_file("disk.img",                   "Disk  image ", mem_disk);
 
-    assert(fe310_size <= SIZE_4MB && earth_size <= SIZE_4MB && disk_size  == SIZE_4MB);
+    assert(fe310_size <= SIZE_16MB && earth_size <= SIZE_16MB && disk_size  == SIZE_16MB);
 
     freopen("bootROM.bin", "w", stdout);
-    for (int i = 0; i < SIZE_4MB; i++) putchar(mem_fe310[i]);
-    for (int i = 0; i < SIZE_4MB; i++) putchar(mem_earth[i]);
-    for (int i = 0; i < SIZE_4MB; i++) putchar(mem_disk[i]);
+    for (int i = 0; i < SIZE_16MB; i++) putchar(mem_fe310[i]);
+    for (int i = 0; i < SIZE_16MB; i++) putchar(mem_earth[i]);
+    for (int i = 0; i < SIZE_16MB; i++) putchar(mem_disk[i]);
     fclose(stdout);
 
     fprintf(stderr, "[INFO] Finish making the bootROM binary (tools/bootROM.bin)\n");

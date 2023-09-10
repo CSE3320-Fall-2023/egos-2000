@@ -6,7 +6,7 @@ MEMORY
 {
     ram (arw!xi) : ORIGIN = 0x08000000, LENGTH = 0x2000
     rom (irx!wa) : ORIGIN = 0x20400000, LENGTH = 0x400000
-    disk(irx!wa) : ORIGIN = 0x20800000, LENGTH = 0x400000
+    disk(irx!wa) : ORIGIN = 0x20800000, LENGTH = 0x1000000
 }
 
 PHDRS
@@ -54,7 +54,7 @@ SECTIONS
 
     .image : {
         *(.image.placeholder);
-        . += 0x400000;
+        . += 0x1000000;
     } >disk :disk
 
     PROVIDE( bss_start = ADDR(.bss) );

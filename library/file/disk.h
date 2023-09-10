@@ -4,7 +4,7 @@
 #define PAGING_DEV_SIZE       1024 * 1024
 #define GRASS_NEXEC           8
 #define GRASS_EXEC_SIZE       1024 * 1024
-#define FS_DISK_SIZE          1024 * 1024 * 2
+#define FS_DISK_SIZE          1024 * 1024 * 14
 #define GRASS_EXEC_SEGMENT    (GRASS_EXEC_SIZE / GRASS_NEXEC / BLOCK_SIZE)
 
 #define GRASS_EXEC_START      PAGING_DEV_SIZE / BLOCK_SIZE
