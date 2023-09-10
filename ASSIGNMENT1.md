@@ -18,11 +18,15 @@ To the process control block add:
 2. The time the process was created
 3. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
 
-### kill
+### kill system call
+
+Add a system call, kill, that takes a PID as a command line parameter and kills the process that has the user supplied PID.  You will need to add a new type of proc_req: PROC_KILL and the associated code in servers.c and sys_proc.c
+
+### kill application
 
 Add a user application kill.c that takes a PID as a command line parameter and kills the process that has the user supplied PID.
 
-You will need edit tools/mkfs.c to add your new executable to disk image.  You will need to add a new type of proc_req: PROC_KILL and the associated code in servers.c and sys_proc.c
+You will need edit tools/mkfs.c to add your new executable to disk image.  
 
 ### ps 
 Add functionality to the ps command in ps.c to display:
