@@ -46,7 +46,7 @@ PID     STATUS  PRIORITY  CTX
 
 ## How to submit code and report.
 
-Your program source code is to be turned in via the Feedback GitHub pull request. Do not merge this pull request. Submission time is determined by the GitHub system time. You may push your code as often as you wish. Only your last submission will be graded.
+Your program source code is to be turned in via a push to your assignment repository. Do not clone the assignment repository.  Use the link in the Canvas assignment. Submission time is determined by the GitHub system time. You may push your code as often as you wish. Only your last submission will be graded.
 
 ## Administrative
 
