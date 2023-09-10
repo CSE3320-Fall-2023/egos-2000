@@ -15,7 +15,7 @@ Implement the setprio system call to allow processes to set their priority. The 
 ### Process control blocks
 To the process control block add:
 1. Priority, an integer from 1 to 10
-2. 
+2. The time the process was created
 3. Number of context switches, an integer representing the nunmber of times a process is scheduled to be run by the scheduler
 
 ### kill
