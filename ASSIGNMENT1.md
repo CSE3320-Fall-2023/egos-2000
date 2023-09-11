@@ -2,7 +2,7 @@
 
 For this assignment you will be making modifications to the egos-2000 operating system.  You will be implementing a new system call, a new libc function and a few assorted utility programs.
 
-You may complete this assignment in groups of up to two people. If you wish to be in a group you must add your group to the spreadsheet linked in the Canvas assignment no later than 07/02/23 at at 11:59pm. 
+You may complete this assignment in groups of up to two people. If you wish to be in a group you must add your group to the spreadsheet linked in the Canvas assignment no later than 09/27/23 at at 11:59pm. 
 
 ## Requirements
 
